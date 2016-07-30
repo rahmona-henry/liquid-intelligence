@@ -2,9 +2,39 @@
 <html>
 <head>
   <title>liquid intelligence</title>
-    <link rel='stylesheet' type='text/css' href='main.css'>
+  <link rel='stylesheet' href='css/normalize.css'>
+  <link rel='stylesheet' href='css/skeleton.css'>
+  <link rel='stylesheet' href='css/main.css' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 <body>
-</body>
+<div class='u-max-full-width container'>
 
+    <div class='login'>
+        <div class='row'>
+      <h4>login</h4>
+      <h5>welcome back.</h5>
+  </div>
+        <div class='row'>
+          <div class='u-full-width'>
+            <form>
+            <label for='emailInput'>email address</label>
+            <input class='u-full-width' type='email' placeholder='rahmona.henry@icloud.com' id='emailInput'>
+        </div>
+        </div>
+        <div class='row'>
+          <div class='u-full-width'>
+            <label for='password'>password</label>  <label><a href='#'>forgot?</a></label>
+            <input class='u-full-width' type='text' placeholder='abracadabra' id='passwordInput'>
+          </div>
+        </div>
+        <br>
+        <input class='button button-primary' type='submit' value='submit'>
+      </form>
+      <h6>Don't have an account? <a class='join' href='/signUp'><b>Join</b></h6>
+      <br>
+    </div>
+      </div>
+</body>
+<script src='app.js'></script>
 </html>
