@@ -35,6 +35,27 @@ body {
   color:#000000;
 }
 
+.logo p {
+  border-radius: 35px;
+  border-color: #ffffff;
+  border: 2px solid #ffffff;
+  height:80px;
+  width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  float:right;
+  top:100px;
+  right:30px;
+  position:relative;
+
+
+
+}
+
+
+
+
  a {
   color:#000000;
 }
