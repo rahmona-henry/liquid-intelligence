@@ -233,7 +233,7 @@ input[type="button"].button-primary:focus {
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-input[type="email"],
+input[type="email"] ,
 input[type="number"],
 input[type="search"],
 input[type="text"],
