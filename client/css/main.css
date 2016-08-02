@@ -33,12 +33,13 @@ body {
 
 .signUp {
     position:relative;
-    border: 2px solid #ffffff;
+    border: 2px solid #47B87C;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 400px;
+    color:#47B87C;
 }
 
 .join {
@@ -58,6 +59,23 @@ body {
   top:100px;
   right:30px;
   position:relative;
+
+}
+
+.logo2 p {
+  border-radius: 40px;
+  border-color:#47B87C;
+  border: 2px solid #47B87C;
+  height:80px;
+  width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  float:right;
+  top:100px;
+  right:30px;
+  position:relative;
+  color:#47B87C;
 
 }
  a {

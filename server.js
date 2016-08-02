@@ -3,8 +3,11 @@ var app = express()
 
 app.use(express.static('client'))
 app.set('view engine','hbs')
-// app.set('views', path.join(_dirname,'client'))
 
+var knexConfig = require('./knexfile')
+var env = process.env.NODE_ENV || 'development'
+var knex = require('knex')(knexConfig[env])
+ 
 app.get('/', function(req, res){
   res.send('index.html')
 })

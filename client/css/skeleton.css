@@ -211,6 +211,7 @@ input[type="submit"].button-primary {
   border-color: #ffffff;
   border: 2px solid #ffffff;
   },
+
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
