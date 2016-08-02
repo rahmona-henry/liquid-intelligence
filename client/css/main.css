@@ -31,6 +31,16 @@ body {
   width: 400px;
 }
 
+.signUp {
+    position:relative;
+    border: 2px solid #ffffff;
+    border-radius: 35px;
+    margin: 0 auto;
+    padding:25px;
+    height:450px;
+    width: 400px;
+}
+
 .join {
   color:#000000;
 }
@@ -54,8 +64,6 @@ body {
   color:#000000;
 }
 
-form {
+form  {
   font-family: 'Roboto', sans-serif;
-  color: #000000;
-  display
 }
