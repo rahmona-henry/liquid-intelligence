@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/rahmona-henry/liquid-intelligence#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
     "express": "^4.14.0",
     "hbs": "^4.0.0",

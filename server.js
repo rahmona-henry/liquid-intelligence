@@ -1,8 +1,11 @@
 var express = require('express')
 var app = express()
+var bodyParser = require('body-parser')
 
 app.use(express.static('client'))
+app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
+
 
 var knexConfig = require('./knexfile')
 var env = process.env.NODE_ENV || 'development'
@@ -26,7 +29,6 @@ app.listen(3000, function(){
 
  ////////// POST ROUTES //////////
 
- app.post('/signUp', function(req, res){
-   console.log
+ app.post('/signIn', function(req, res){
 
  })
