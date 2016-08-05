@@ -31,6 +31,8 @@ body {
   width: 400px;
 }
 
+
+
 .signUp {
     position:relative;
     border: 2px solid #4BC35F;
@@ -82,10 +84,9 @@ body {
   color:#000000;
 }
 
-.signUp a {
-  color:#4BC35F;
-}
 
-form  {
+
+form input {
   font-family: 'Roboto', sans-serif;
+  color:#000000;
 }

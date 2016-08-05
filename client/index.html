@@ -21,19 +21,15 @@
       <h2>login</h2>
       <h5>welcome back.</h5>
   </div>
-        <div class='row'>
-          <div class='u-full-width'>
+        <!-- <div class='row'> -->
+          <div class='u-max-full-width'>
             <form action='/signIn' method='POST'>
             <label for='emailInput'>email address</label>
-            <input class='u-full-width' type='email' placeholder='rahmona.henry@icloud.com' id='emailInput'>
-        </div>
-        </div>
-        <div class='row'>
-          <div class='u-full-width'>
+            <input class='u-full-width' type='email' placeholder='rahmona.henry@icloud.com' name='email'>
             <label for='password'>password</label>  <label><a href='#'>forgot?</a></label>
-            <input class='u-full-width' type='text' placeholder='abracadabra' autocomplete='off' id='passwordInput'>
+            <input class='u-full-width' type='password' placeholder='abracadabra' autocomplete='off' name='hashed_password'>
           </div>
-        </div>
+        <!-- </div> -->
         <br>
         <input class='button button-primary' type='submit' value='login'>
       </form>
