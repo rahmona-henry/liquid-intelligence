@@ -3,6 +3,9 @@ var app = express()
 var bodyParser = require('body-parser')
 var bcrypt = require('bcrypt')
 var path = require('path')
+var session = require('express-session')
+var KnexSessionStore = require('connect-session-knex')(session)
+var store = new KnexSessionStore({knex: knex})
 
 app.use(express.static('client'))
 app.set('views',path.join(__dirname,'views'))
@@ -11,6 +14,12 @@ app.set('views',path.join(__dirname,'views'))
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
 
+app.use(session({
+  secret: 'liquid network',
+  saveUninitialized: true;
+  resave: true;
+  store: store
+})
 
 var knexConfig = require('./knexfile')
 var env = process.env.NODE_ENV || 'development'
@@ -28,7 +37,7 @@ app.get('/signUp', function(req,res){
   res.render('signUp')
 })
 
-app.get('/userHome', function(req, res){
+app.get('/userHome', function(req, res){  i
   res.render('userHome')
 })
 
