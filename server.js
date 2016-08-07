@@ -28,6 +28,11 @@ app.get('/signUp', function(req,res){
   res.render('signUp')
 })
 
+app.get('/userHome', function(req, res){
+  res.render('userHome')
+})
+
+
 app.listen(3000, function(){
   console.log('We have lift off on port 3000!')
 })
@@ -41,17 +46,17 @@ app.listen(3000, function(){
 app.post('/signUp', function(req,res){
 
   if (req.body.email === ''){
-    res.redirext('/signUp')
+    res.redirect('/signUp')
   }
-
-  var hash = bcrypt.hashSync( req.body.password, 10 )
-  knex('users').insert({email:req.body.email, hashed_password:hash})
-  .then(function(data){
-    console.log('this is data',data)
+   var hash = bcrypt.hashSync(req.body.password, 10)
+    knex('users').insert({email:req.body.email, hashed_password:hash})
+     .then(function(data){
+      res.redirect('userHome')
+      console.log('success')
   })
   .catch(function(error){
     console.log('error')
-    res.redirect('/')
+     res.redirect('/')
   })
 
 })
