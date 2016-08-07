@@ -16,10 +16,10 @@ app.set('view engine','hbs')
 
 app.use(session({
   secret: 'liquid network',
-  saveUninitialized: true;
-  resave: true;
+  saveUninitialized: true,
+  resave: true,
   store: store
-})
+}))
 
 var knexConfig = require('./knexfile')
 var env = process.env.NODE_ENV || 'development'
@@ -37,7 +37,11 @@ app.get('/signUp', function(req,res){
   res.render('signUp')
 })
 
-app.get('/userHome', function(req, res){  i
+// app.get('signIn', function(req,res){
+//   res.render('signIn')
+// })
+
+app.get('/userHome', function(req, res){
   res.render('userHome')
 })
 
@@ -48,12 +52,9 @@ app.listen(3000, function(){
 
  ////////// POST ROUTES //////////
 
- app.post('/signIn', function(req,res){
 
- })
 
 app.post('/signUp', function(req,res){
-
   if (req.body.email === ''){
     res.redirect('/signUp')
   }
@@ -66,6 +67,30 @@ app.post('/signUp', function(req,res){
   .catch(function(error){
     console.log('error')
      res.redirect('/')
+  })
+})
+
+
+app.post('/signIn', function(req,res){
+  knex('users').where('email',req.body.email)
+    .then(function(data){
+     if(req.body.email === ''){
+       res.redirect('/')
+     }
+     else if (bcrypt.compareSync(req.body.password, data[0].hashed_password)){
+       req.session.userId=data[0].
+       res.redirect('userHome')
+       console.log ('success! sign in happend by user' + req.session.userID + '!' )
+     }
+     else {
+       console.log('incorrect password')
+       res.redirect('/')
+     }
+   })
+  .catch(function(error){
+    console.log('There is a problem - error!', error)
+    req.session.userId = 0
+    res.redirect('/signUp')
   })
 
 })
