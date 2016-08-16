@@ -37,9 +37,9 @@ app.get('/signUp', function(req,res){
   res.render('signUp')
 })
 
-// app.get('signIn', function(req,res){
-//   res.render('signIn')
-// })
+app.get('signIn', function(req,res){
+  res.render('signIn')
+})
 
 app.get('/userHome', function(req, res){
   res.render('userHome')
@@ -55,14 +55,10 @@ app.listen(3000, function(){
 
 
 app.post('/signUp', function(req,res){
-  if (req.body.email === ''){
-    res.redirect('/signUp')
-  }
-   var hash = bcrypt.hashSync(req.body.password, 10)
+   var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
      .then(function(data){
       res.redirect('userHome')
-      console.log('success')
   })
   .catch(function(error){
     console.log('error')
@@ -77,10 +73,11 @@ app.post('/signIn', function(req,res){
      if(req.body.email === ''){
        res.redirect('/')
      }
-     else if (bcrypt.compareSync(req.body.password, data[0].hashed_password)){
-       req.session.userId=data[0].
+     else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
+       console.log('this is data', data[0].id)
+       req.session.emailId=data[0].email
        res.redirect('userHome')
-       console.log ('success! sign in happend by user' + req.session.userID + '!' )
+       console.log ('success!', req.session.emailId)
      }
      else {
        console.log('incorrect password')
@@ -92,5 +89,4 @@ app.post('/signIn', function(req,res){
     req.session.userId = 0
     res.redirect('/signUp')
   })
-
 })
