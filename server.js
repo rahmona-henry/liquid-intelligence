@@ -42,12 +42,12 @@ app.get('/signIn', function(req,res){
 })
 
 app.get('/userHome', function(req, res){
-  if(!req.session.userId){
-    res.redirect('signIn')
-  }
-  else {
+  // if(!req.session.emailId){
+  //   res.redirect('signIn')
+  // }
+  // else {
   res.render('userHome' , {emailId:req.session.emailId})
-  }
+  // }
 })
 
 // app.get('/signOut', function(req, res){
@@ -88,7 +88,7 @@ app.post('/signIn', function(req,res){
    })
   .catch(function(error){
     console.log('There is a problem - error!', error)
-    req.session.userId = 0
+    req.session.emailId = 0
     res.redirect('signUp')
   })
 })
