@@ -46,8 +46,9 @@ app.get('/userHome', function(req, res){
 })
 
 app.get('/signOut', function(req, res){
-  req.session.destroy()
-   res.render('signOut')
+res.render('signOut', {emailId:req.session.emailId})
+req.session.destroy()
+
 })
 
 
@@ -57,10 +58,12 @@ app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
      .then(function(data){
+      // req.session.emailId = data[0].email
       res.redirect('userHome')
   })
   .catch(function(error){
     console.log('error')
+    // req.session.emailId = 0
      res.redirect('/')
   })
 })
