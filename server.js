@@ -37,22 +37,26 @@ app.get('/signUp', function(req,res){
   res.render('signUp')
 })
 
-app.get('signIn', function(req,res){
+app.get('/signIn', function(req,res){
   res.render('signIn')
 })
 
 app.get('/userHome', function(req, res){
-  res.render('userHome')
+  if(!req.session.userId){
+    res.redirect('signIn')
+  }
+  else {
+  res.render('userHome' , {emailId:req.session.emailId})
+  }
 })
 
+// app.get('/signOut', function(req, res){
+//   req.session.destroy()
+//    res.redirect('signOut')
+// })
 
-app.listen(3000, function(){
-  console.log('We have lift off on port 3000!')
-})
 
  ////////// POST ROUTES //////////
-
-
 
 app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
@@ -66,7 +70,6 @@ app.post('/signUp', function(req,res){
   })
 })
 
-
 app.post('/signIn', function(req,res){
   knex('users').where('email',req.body.email)
     .then(function(data){
@@ -74,7 +77,6 @@ app.post('/signIn', function(req,res){
        res.redirect('/')
      }
      else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
-       console.log('this is data', data[0].id)
        req.session.emailId=data[0].email
        res.redirect('userHome')
        console.log ('success!', req.session.emailId)
@@ -87,6 +89,12 @@ app.post('/signIn', function(req,res){
   .catch(function(error){
     console.log('There is a problem - error!', error)
     req.session.userId = 0
-    res.redirect('/signUp')
+    res.redirect('signUp')
   })
+})
+
+/////////// Listen Route //////////////
+
+app.listen(3000, function(){
+  console.log('We have lift off on port 3000!')
 })

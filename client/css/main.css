@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body.homepage {
-  background-image: url('/images/beer.jpeg');
+    background-image: url('/images/beer.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -24,6 +24,18 @@ body.joinup {
 }
 
 body.fire {
+  background-image: url('/images/fire.jpeg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+
+body.goodbye {
   background-image: url('/images/fire.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -106,39 +118,7 @@ body.fire {
 
 }
 
-.logo2 p {
-  border-radius: 40px;
-  border-color:#fffffff;
-  border: 3px solid #ffffff;
-  height:80px;
-  width: 500px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
-  text-align: center;
-  float:right;
-  top:100px;
-  right:30px;
-  position:relative;
-  color:#ffffff;
 
-}
-
-.logo3  {
-  border-radius: 40px;
-  border-color:#ffffff;
-  border: 3px solid #ffffff;
-  height:80px;
-  width: 500px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
-  text-align: center;
-  float:right;
-  top:100px;
-  right:30px;
-  position:relative;
-  color:#ffffff;
-
-}
  a {
   color:#000000;
 }
