@@ -42,18 +42,13 @@ app.get('/signIn', function(req,res){
 })
 
 app.get('/userHome', function(req, res){
-  // if(!req.session.emailId){
-  //   res.redirect('signIn')
-  // }
-  // else {
-  res.render('userHome' , {emailId:req.session.emailId})
-  // }
+  res.render('userHome', {emailId:req.session.emailId})
 })
 
-// app.get('/signOut', function(req, res){
-//   req.session.destroy()
-//    res.redirect('signOut')
-// })
+app.get('/signOut', function(req, res){
+  req.session.destroy()
+   res.redirect('signIn')
+})
 
 
  ////////// POST ROUTES //////////
@@ -77,9 +72,8 @@ app.post('/signIn', function(req,res){
        res.redirect('/')
      }
      else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
-       req.session.emailId=data[0].email
+       req.session.emailId = data[0].email
        res.redirect('userHome')
-       console.log ('success!', req.session.emailId)
      }
      else {
        console.log('incorrect password')
