@@ -47,7 +47,7 @@ app.get('/userHome', function(req, res){
 
 app.get('/signOut', function(req, res){
   req.session.destroy()
-   res.redirect('signIn')
+   res.render('signOut')
 })
 
 
