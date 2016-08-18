@@ -46,7 +46,7 @@ app.get('/userHome', function(req, res){
 })
 
 app.get('/signOut', function(req, res){
-res.render('signOut', {emailId:req.session.emailId})
+res.render('signOut',{emailId:req.session.emailId})
 req.session.destroy()
 
 })
