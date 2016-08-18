@@ -51,6 +51,10 @@ req.session.destroy()
 
 })
 
+app.get('/newBrew', function(req, res){
+  res.render('newBrew')
+})
+
 
  ////////// POST ROUTES //////////
 

@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>sign up here</title>
+  <link rel='stylesheet' href='css/normalize.css'>
+  <link rel='stylesheet' href='css/skeleton.css'>
+  <link rel='stylesheet' href='css/main.css' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body class='newBrew'>
+
+  <body>
+    <div class='section hero'>
+      <div class='logo'>
+        <div class='row'>
+         <p>liquid intelligence</p>
+     </div>
+  </div>
+    </div>
+  <div class='u-max-full-width container'>
+      <div class='signUp'>
+          <div class='row'>
+        <h2>add a new brew</h2>
+    </div>
+            <div class='u-max-full-width'>
+              <form  action='/signUp' method='POST'>
+              <label for='emailInput'>email address</label>
+              <input class='u-full-width' type='email' name='email'>
+              <label for='password'>password</label>
+              <input class='u-full-width' type='password'  autocomplete='off' name='hashed_password'>
+          </div>
+          <br>
+          <input class='button button-primary' type='submit' value='add'>
+        </form>
+        <br>
+        <a class='button button-primary' href='index.html'>home</a>
+      </div>
+        </div>
+  </body>
+  <script src='app.js'></script>
+  </html>
