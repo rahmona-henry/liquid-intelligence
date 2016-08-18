@@ -166,7 +166,7 @@ a:hover {
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
-button,
+button
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -201,7 +201,16 @@ input[type="button"]:focus {
   border-color: #888;
   outline: 0; }
 .button.button-primary,
-button.button-primary,
+button.button-primary
+{
+  background-color: #000000;
+  color:#ffffff;
+  width:230px;
+  height:40px;
+  border-radius: 25px;
+  border-color: #ffffff;
+  border: 2px solid #ffffff;
+  },
 input[type="submit"].button-primary {
   background-color: #000000;
   color:#ffffff;
