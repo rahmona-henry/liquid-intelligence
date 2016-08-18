@@ -58,8 +58,7 @@ app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
      .then(function(data){
-      // req.session.emailId = data[0].email
-      res.redirect('userHome')
+      res.render('userHome',{emailId:req.body.email})
   })
   .catch(function(error){
     console.log('error')
