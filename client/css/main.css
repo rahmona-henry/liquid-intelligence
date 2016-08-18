@@ -137,7 +137,9 @@ body.goodbye {
   color:#000000;
 }
 
-
+.links a {
+  text-decoration: none;
+}
 
 form input {
   font-family: 'Roboto', sans-serif;
