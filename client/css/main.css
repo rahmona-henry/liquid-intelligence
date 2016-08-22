@@ -43,13 +43,13 @@ body.goodbye {
   background-size: cover;
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  color: #ffffff;
+  color: #000000;
 }
 
 
 
 body.newbeer {
-  /*background-image: url('/images/backdrop.jpeg');*/
+  /*background-image: url('/images/moon.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -108,10 +108,12 @@ body.newbeer {
   position:relative;
   border: 3px solid #000000;
   border-radius: 35px;
-  margin: 10px;
+  margin: 0 auto;
   padding:25px;
-  /*height:450px;*/
-  /*width: 100%;*/
+  color:#000000;
+  height:60%;
+  width: 60%;
+
 }
 
 .userOptions a {
@@ -156,6 +158,22 @@ body.newbeer {
 
 }
 
+.logo1 p {
+  border-radius: 40px;
+  border-color: #000000;
+  border: 3px solid #000000;
+  height:80px;
+  width: 500px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  float:right;
+  top:100px;
+  right:40px;
+  /*position:relative;*/
+  margin-right: 25px;
+
+}
 
  a {
   color:#000000;

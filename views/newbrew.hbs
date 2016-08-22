@@ -10,97 +10,108 @@
 <body class='newBeer'>
 
   <div class='u-max-full-width container'>
+    <div class='section hero'>
+      <div class='.u-cf logo1'>
+        <div class='row'>
+    <p>liquid intelligence</p>
+    </div>
+  </div>
+    </div>
+    <br>
+    <br>
     <div class='newbrewForm'>
-      <h2>create a new brew</h2>
     <div class='u-full-width'>
-
+      <h3>create a new brew</h3>
       <form action='/newbrew' method='POST'>
         <div class='row'>
-        <div class='six columns'>
+        <div class='three columns offset-by-three columns'>
         <b><label for='newBrew'>brew name</label></b>
         <input class='u-full-width' placeholder='name' type='text' name='brewName'>
       </div>
-        <div class='six columns'>
+        <div class='three columns'>
         <b><label for='brewer'>brewer</label></b>
         <input class='u-full-width' placeholder='brewer' type='text' name='brewer'>
     </div>
   </div>
     <div class='row'>
-    <div class='six columns'>
+    <div class='three columns offset-by-three columns'>
     <b><label for='brewStyle'>brew style</label></b>
     <input class='u-full-width' placeholder='style' type='text' name='brewStyle'>
   </div>
-    <div class='six columns'>
+    <div class='three columns'>
     <b><label for='batchNumber'>batch number</label></b>
     <input class='u-full-width' placeholder='batch number' type='number' name='batchNumber'>
   </div>
   </div>
   <div class='row'>
-    <div class='six columns'>
+    <div class='three columns offset-by-three columns'>
     <b><label for='brewIngredients'>brew ingredients</label></b>
     <textarea class='u-full-width' placeholder='ingredients' name='brewIngredients'></textarea>
   </div>
-  <div class='six columns'>
+  <div class='three columns'>
     <b><label for='brewingProcess'>brewing process</label></b>
     <textarea class='u-full-width' placeholder='process' name='brewingProcess'></textarea>
   </div>
  </div>
   <div class='row'>
-  <div class='six columns'>
+  <div class='three columns offset-by-three columns'>
   <b><label for='brewDate'>brew date</label></b>
   <input class='u-full-width' placeholder='brew date' type='date' name='brewDate'>
  </div>
-  <div class='six columns'>
+  <div class='three columns'>
   <b><label for='bottlingDate'>bottling date</label></b>
   <input class='u-full-width' placeholder='bottling Date' type='date' name='bottlingDate'>
  </div>
 </div>
 <div class='row'>
-           <div class='six columns'>
+           <div class='three columns offset-by-three columns'>
              <b><label for='mashTime'>mash time</label></b>
              <input class='u-full-width' type='text' placeholder='mash time' name='mashTime'>
        </div>
 
-           <div class='six columns'>
+           <div class='three columns'>
            <b><label for='boilTime'>boil time</label></b>
              <input class='u-full-width' type='text' placeholder='final gravity' name='final'>
           </div>
         </div>
 <div class='row'>
-           <div class='six columns'>
+           <div class='three columns offset-by-three columns'>
              <b><label for='originalGravity'>original gravity</label></b>
              <input class='u-full-width' type='number' placeholder='original gravity' name='original'>
        </div>
 
-           <div class='six columns'>
+           <div class='three columns'>
            <b><label for='finalGravity'>final gravity</label></b>
              <input class='u-full-width' type='number' placeholder='final gravity' name='final'>
           </div>
         </div>
 <div class='row'>
-<div class='six columns'>
+<div class='three columns offset-by-three columns'>
 <b><label for='mashTemperature'>mash temperature</label></b>
 <input class='u-full-width' placeholder='mash temperature' type='number' name='mashTemperature'>
 </div>
-<div class='six columns'>
+<div class='three columns'>
 <b><label for='fermentTemperature'>fermentation temperature</label></b>
 <input class='u-full-width' placeholder='fermentation temperature' type='number' name='fermentTemperature'>
 </div>
 </div>
 <div class='row'>
-  <div class='six columns'>
+  <div class='three columns offset-by-three columns'>
   <b><label for='batchYield'>batch size</label></b>
-  <input class='u-full-width' type="number" placeholder='batch size' name='batctSize'>
+  <input class='u-full-width' type="number" placeholder='batch size' name='batchSize'>
   </div>
-  <div class='six columns'>
+  <div class='three columns'>
     <b><label for='abv'>abv</label></b>
     <input class='u-full-width' type='number' placeholder='abv' name='abv'>
     </div>
   </div>
-  <div class='row'
+  <div class='row'>
+  <div class='six columns offset-by-three columns'>
       <b><label for='tasting notes'>tasting notes</label></b>
-          <textarea class='u-full-width' placeholder='tasting notes' name='tasting'></textarea>
+          <textarea class='u-full-width' placeholder='tasting notes' name='tastingNotes'></textarea>
+</div>
   </div>
+  <br>
         <input class='button button-primary' type='submit' value='add'>
 </form>
    </div>

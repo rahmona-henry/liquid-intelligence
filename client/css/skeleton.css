@@ -253,6 +253,7 @@ input[type="text"] {
   border-radius: 25px;
   box-shadow: none;
   box-sizing: border-box; }
+
 input[type="date"] {
     height: 38px;
     padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
@@ -274,7 +275,15 @@ select {
   box-shadow: none;
   box-sizing: border-box; }
 /* Removes awkward default styles on some inputs for iOS */
-input[type="email"],
+input[type="email"] {
+height: 38px;
+padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+background-color: #fff;
+border: 2px solid #ffffff;
+border-radius: 25px;
+box-shadow: none;
+box-sizing: border-box; }
+,
 input[type="number"],
 input[type="search"],
 input[type="text"],
@@ -286,7 +295,7 @@ textarea {
      -moz-appearance: none;
           appearance: none; }
 textarea {
-  min-height: 85px;
+  min-height: 55px;
   padding: 6px 10px;
   /*padding-top: 6px;
   padding-bottom: 6px;*/
