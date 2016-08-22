@@ -48,8 +48,8 @@ body.goodbye {
 
 
 
-body.newbeer {
-  /*background-image: url('/images/moon.jpeg');*/
+body.newBeer {
+  background-image: url('/images/white.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -100,7 +100,7 @@ body.newbeer {
     padding:25px;
     height:450px;
     width: 400px;
-    color:#ffffff;
+    color:#000000;
 }
 
 
@@ -112,7 +112,12 @@ body.newbeer {
   padding:25px;
   color:#000000;
   height:60%;
-  width: 60%;
+  width: 60%;]
+
+
+}
+
+.newbrewForm h3 {
 
 }
 
@@ -172,6 +177,7 @@ body.newbeer {
   right:40px;
   /*position:relative;*/
   margin-right: 25px;
+  color:#000000;
 
 }
 
