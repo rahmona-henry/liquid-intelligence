@@ -253,6 +253,14 @@ input[type="text"] {
   border-radius: 25px;
   box-shadow: none;
   box-sizing: border-box; }
+input[type="date"] {
+    height: 38px;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    box-shadow: none;
+    box-sizing: border-box; }
 input[type="tel"],
 input[type="url"],
 input[type="password"],

@@ -11,6 +11,7 @@
 
   <div class='u-max-full-width container'>
     <div class='newbrewForm'>
+      <h2>create a new brew</h2>
     <div class='u-full-width'>
 
       <form action='/newbrew' method='POST'>
@@ -47,17 +48,59 @@
   <div class='row'>
   <div class='six columns'>
   <b><label for='brewDate'>brew date</label></b>
-  <input class='u-full-width' placeholder='brew date' type='text' name='brewDate'>
+  <input class='u-full-width' placeholder='brew date' type='date' name='brewDate'>
  </div>
   <div class='six columns'>
   <b><label for='bottlingDate'>bottling date</label></b>
-  <input class='u-full-width' placeholder='bottling Date' type='text' name='bottlingDate'>
+  <input class='u-full-width' placeholder='bottling Date' type='date' name='bottlingDate'>
  </div>
 </div>
+<div class='row'>
+           <div class='six columns'>
+             <b><label for='mashTime'>mash time</label></b>
+             <input class='u-full-width' type='text' placeholder='mash time' name='mashTime'>
+       </div>
 
+           <div class='six columns'>
+           <b><label for='boilTime'>boil time</label></b>
+             <input class='u-full-width' type='text' placeholder='final gravity' name='final'>
+          </div>
+        </div>
+<div class='row'>
+           <div class='six columns'>
+             <b><label for='originalGravity'>original gravity</label></b>
+             <input class='u-full-width' type='number' placeholder='original gravity' name='original'>
+       </div>
 
-
-
+           <div class='six columns'>
+           <b><label for='finalGravity'>final gravity</label></b>
+             <input class='u-full-width' type='number' placeholder='final gravity' name='final'>
+          </div>
+        </div>
+<div class='row'>
+<div class='six columns'>
+<b><label for='mashTemperature'>mash temperature</label></b>
+<input class='u-full-width' placeholder='mash temperature' type='number' name='mashTemperature'>
+</div>
+<div class='six columns'>
+<b><label for='fermentTemperature'>fermentation temperature</label></b>
+<input class='u-full-width' placeholder='fermentation temperature' type='number' name='fermentTemperature'>
+</div>
+</div>
+<div class='row'>
+  <div class='six columns'>
+  <b><label for='batchYield'>batch size</label></b>
+  <input class='u-full-width' type="number" placeholder='batch size' name='batctSize'>
+  </div>
+  <div class='six columns'>
+    <b><label for='abv'>abv</label></b>
+    <input class='u-full-width' type='number' placeholder='abv' name='abv'>
+    </div>
+  </div>
+  <div class='row'
+      <b><label for='tasting notes'>tasting notes</label></b>
+          <textarea class='u-full-width' placeholder='tasting notes' name='tasting'></textarea>
+  </div>
         <input class='button button-primary' type='submit' value='add'>
 </form>
    </div>
