@@ -295,7 +295,7 @@ textarea {
      -moz-appearance: none;
           appearance: none; }
 textarea {
-  min-height: 55px;
+  min-height: 65px;
   padding: 6px 10px;
   /*padding-top: 6px;
   padding-bottom: 6px;*/
