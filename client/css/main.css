@@ -46,6 +46,19 @@ body.goodbye {
   color: #ffffff;
 }
 
+
+
+body.newbeer {
+  /*background-image: url('/images/backdrop.jpeg');*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
 .container {
     text-align: center;
     position: fixed;
