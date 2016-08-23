@@ -52,7 +52,11 @@ req.session.destroy()
 })
 
 app.get('/newBrew', function(req, res){
-  res.render('newBrew')
+  res.render('newbrew')
+})
+
+app.get('/brewOptions', function(req, res){
+  res.render('brewOptions')
 })
 
 
@@ -93,7 +97,21 @@ app.post('/signIn', function(req,res){
   })
 })
 
-
+app.post('/newBrew', function(req,res){
+  knex('brews').insert({brewName:req.body.brewName, brewer:req.body.brewer, brewStyle:req.body.brewStyle,
+                        batchNumber:req.body.batchNumber, brewIngredients:req.body.brewIngredients,
+                        brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
+                        mashTime:req.body.mashTime, boilTime:req.body.boilTime, original:req.body.original, final:req.body.final,
+                        mashTemperature:req.body.mashTemperature, fermentTemperature:req.body.fermentTemperature,
+                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes})
+                        .then(function(data){
+                          res.render('brewOptions')
+                        })
+                        .catch(function(error){
+                          console.log('Error', error)
+                          res.redirect('/')
+                        })
+})
 
 
 /////////// Listen Route //////////////
