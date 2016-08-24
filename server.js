@@ -45,20 +45,19 @@ app.get('/userHome', function(req, res){
   res.render('userHome', {emailId:req.session.emailId})
 })
 
-app.get('/signOut', function(req, res){
-res.render('signOut',{emailId:req.session.emailId})
-req.session.destroy()
-
-})
-
-app.get('/newBrew', function(req, res){
-  res.render('newbrew')
+app.get('/newbrew', function(req, res){
+  res.render('newbrew', {emailId:req.session.emailId})
 })
 
 app.get('/brewOptions', function(req, res){
-  res.render('brewOptions')
+  res.render('brewOptions', {emailId:req.session.emailId})
 })
 
+app.get('/signOut', function(req, res){
+res.render('signOut', {emailId:req.session.emailId})
+req.session.destroy()
+
+})
 
  ////////// POST ROUTES //////////
 
@@ -70,7 +69,7 @@ app.post('/signUp', function(req,res){
   })
   .catch(function(error){
     console.log('error')
-    // req.session.emailId = 0
+    //  req.session.emailId = 0
      res.redirect('/')
   })
 })
@@ -92,20 +91,21 @@ app.post('/signIn', function(req,res){
    })
   .catch(function(error){
     console.log('There is a problem - error!', error)
-    req.session.emailId = 0
+    // req.session.emailId = 0
     res.redirect('signUp')
   })
 })
 
-app.post('/newBrew', function(req,res){
+app.post('/newbrew', function(req,res){
+  console.log('this is req.session.emailId  from the new brewpage',req.session.emailId)
   knex('brews').insert({brewName:req.body.brewName, brewer:req.body.brewer, brewStyle:req.body.brewStyle,
                         batchNumber:req.body.batchNumber, brewIngredients:req.body.brewIngredients,
                         brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
                         mashTime:req.body.mashTime, boilTime:req.body.boilTime, original:req.body.original, final:req.body.final,
                         mashTemperature:req.body.mashTemperature, fermentTemperature:req.body.fermentTemperature,
-                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes})
+                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes,})
                         .then(function(data){
-                          res.render('brewOptions')
+                          res.render('brewOptions', {emailId:req.body.email})
                         })
                         .catch(function(error){
                           console.log('Error', error)
