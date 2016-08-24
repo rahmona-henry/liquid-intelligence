@@ -46,11 +46,12 @@ app.get('/userHome', function(req, res){
 })
 
 app.get('/newbrew', function(req, res){
-  res.render('newbrew', {emailId:req.session.emailId})
+    res.render('newbrew', {emailId:req.session.emailId})
+
 })
 
 app.get('/brewOptions', function(req, res){
-  console.log('this is current session', req.session.emailId)
+  console.log('this is /brewOptions res.body', res.body)
   res.render('brewOptions', {emailId:req.session.emailId})
 })
 
@@ -65,8 +66,10 @@ req.session.destroy()
 app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
-     .then(function(data){
-      res.render('userHome',{emailId:req.body.email})
+       .then(function(data){
+         console.log('this is req.body.email', req.body.email)
+         req.session.emailId = req.body.email
+      res.render('userHome',{emailId:req.session.emailId})
   })
   .catch(function(error){
     console.log('error')
@@ -97,7 +100,6 @@ app.post('/signIn', function(req,res){
 })
 
 app.post('/newbrew', function(req,res){
-  console.log('this is req.session.emailId  from the new brewpage',req.session.emailId)
   knex('brews').insert({brewName:req.body.brewName, brewer:req.body.brewer, brewStyle:req.body.brewStyle,
                         batchNumber:req.body.batchNumber, brewIngredients:req.body.brewIngredients,
                         brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
