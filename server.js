@@ -50,6 +50,7 @@ app.get('/newbrew', function(req, res){
 })
 
 app.get('/brewOptions', function(req, res){
+  console.log('this is current session', req.session.emailId)
   res.render('brewOptions', {emailId:req.session.emailId})
 })
 
@@ -91,7 +92,6 @@ app.post('/signIn', function(req,res){
    })
   .catch(function(error){
     console.log('There is a problem - error!', error)
-    // req.session.emailId = 0
     res.redirect('signUp')
   })
 })
@@ -103,9 +103,9 @@ app.post('/newbrew', function(req,res){
                         brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
                         mashTime:req.body.mashTime, boilTime:req.body.boilTime, original:req.body.original, final:req.body.final,
                         mashTemperature:req.body.mashTemperature, fermentTemperature:req.body.fermentTemperature,
-                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes,})
+                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes, emailId:req.session.emailId})
                         .then(function(data){
-                          res.render('brewOptions', {emailId:req.body.email})
+                          res.render('brewOptions', {emailId:req.session.emailId})
                         })
                         .catch(function(error){
                           console.log('Error', error)

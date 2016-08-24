@@ -21,6 +21,7 @@ exports.up = function(knex, Promise) {
     table.integer('batchSize');
     table.integer('abv');
     table.string('tastingNotes');
+    table.string('emailId');
 
   })
 };
