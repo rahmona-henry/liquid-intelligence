@@ -54,7 +54,7 @@ app.get('/brewOptions', function(req, res){
   res.render('brewOptions', {emailId:req.session.emailId})
 })
 
-app.get('/allbrews', fucntion(req, res){
+app.get('/allbrews', function(req, res){
   res.render('allbrews')
 })
 
