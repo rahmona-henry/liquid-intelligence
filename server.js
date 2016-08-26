@@ -55,7 +55,11 @@ app.get('/brewOptions', function(req, res){
 })
 
 app.get('/allbrews', function(req, res){
-  res.render('allbrews')
+  knex.select().table('brews')
+  .then(function(data){
+    res.json(data)
+  })
+
 })
 
 app.get('/signOut', function(req, res){
