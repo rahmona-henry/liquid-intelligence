@@ -51,8 +51,11 @@ app.get('/newbrew', function(req, res){
 })
 
 app.get('/brewOptions', function(req, res){
-  console.log('this is /brewOptions res.body', res.body)
   res.render('brewOptions', {emailId:req.session.emailId})
+})
+
+app.get('/allbrews', fucntion(req, res){
+  res.render('allbrews')
 })
 
 app.get('/signOut', function(req, res){
@@ -67,13 +70,11 @@ app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
        .then(function(data){
-         console.log('this is req.body.email', req.body.email)
          req.session.emailId = req.body.email
-      res.render('userHome',{emailId:req.session.emailId})
+         res.render('userHome',{emailId:req.session.emailId})
   })
   .catch(function(error){
     console.log('error')
-    //  req.session.emailId = 0
      res.redirect('/')
   })
 })

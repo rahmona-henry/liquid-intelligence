@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>allbrews</title>
+  <link rel='stylesheet' href='css/normalize.css'>
+  <link rel='stylesheet' href='css/skeleton.css'>
+  <link rel='stylesheet' href='css/main.css' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <body class='options'>
+    <div class='section hero'>
+      <div class='logo'>
+        <div class='row'>
+         <p>liquid intelligence</p>
+       </div>
+     </div>
+    </div>
+  <div class='u-max-full-width container'>
+      <div class='allbrews'>
+          <div class='row'>
+            <h3>{{emailId}}'s brewery</h3>
+            <ul>
+               {{#each brews}}
+               <h5>{{name}}</h5>
+               <a class='button button-primary' id='{{this.id}}' href='#'>view</a>
+               {{/each}}
+            </ul>
+              <a class='button button-primary' href='userHome'>home</a>
+    </div>
+  </body>
+  <script src='app.js'></script>
+  </html>
