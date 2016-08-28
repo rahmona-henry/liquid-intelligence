@@ -12,9 +12,9 @@ $(document).ready(function(){
 })
 
 function showAllBrews() {
-    request.get('/allbrews')
+    request.get('/allBrews')
     .end(function(err,res){
-     var list = allbrews{{brew:res.body}}
+     var list = allBrews{{data:res.body}}
      document.body.html = listen
 
      $('viewBtn').click(function(e){

@@ -143,13 +143,13 @@ body.brews {
 
 .brew {
     position:relative;
-    border: 3px solid #000000;
+    border: 3px solid #ffffff;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 400px;
-    color:#000000;
+    color:#ffffff;
 }
 
 .userOptions a {

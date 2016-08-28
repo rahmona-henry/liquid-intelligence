@@ -54,7 +54,7 @@ app.get('/brewOptions', function(req, res){
   res.render('brewOptions', {emailId:req.session.emailId})
 })
 
-app.get('/allbrews', function(req, res){
+app.get('/allBrews', function(req, res){
   knex.select().table('brews')
   .then(function(data){
     res.json(data)
