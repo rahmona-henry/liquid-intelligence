@@ -7,6 +7,7 @@ var $ = require('jquery')
 
 $(document).ready(function(){
   $('#showBtn').click(function(){
+    console.log('showBtn is getting clicked')
     showAllBrews()
   })
 })
