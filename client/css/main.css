@@ -9,6 +9,7 @@ body.homepage {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 
@@ -21,6 +22,7 @@ body.joinup {
   height:100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 body.fire {
@@ -32,6 +34,7 @@ body.fire {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 
@@ -44,6 +47,7 @@ body.goodbye {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 
@@ -57,10 +61,11 @@ body.newBeer {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #000000;
+  overflow: hidden;
 }
 
 body.options {
-  background-image: url('/images/bar.jpeg');
+  background-image: url('/images/oiche.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -68,6 +73,7 @@ body.options {
   height: 150%;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 body.brews {
@@ -79,6 +85,7 @@ body.brews {
   height: 150%;
   font-family: 'Roboto', sans-serif;
   color: #000000;
+  overflow: hidden;
 }
 
 
