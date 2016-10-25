@@ -58,6 +58,7 @@ app.get('/allBrews', function(req, res){
   knex.select().table('brews')
   .then(function(data){
     res.json(data)
+    console.log('this is data', data)
   })
 
 })
