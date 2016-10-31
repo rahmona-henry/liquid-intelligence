@@ -58,10 +58,17 @@ app.get('/allBrews', function(req, res){
   knex.select().table('brews')
   .then(function(data){
     res.json(data)
-    console.log('this is data', data)
   })
 
 })
+
+app.get('/brews/:id', function(req, res){
+  knex('brews').where('id',req.params.id)
+  .then(function(data){
+    var brew = data[0]
+    res.json(brew)
+  })
+} )
 
 app.get('/signOut', function(req, res){
 res.render('signOut', {emailId:req.session.emailId})
