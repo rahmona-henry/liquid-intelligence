@@ -6,16 +6,16 @@ var request = require('superagent')
 var $ = require('jquery')
 
 $(document).ready(function(){
-  $('#showBtn').click(function () {
-  showAllBeers()
+  $('#showBtn').click(function(){
+console.log('showBtn is getting clicked')
   })
 
 
-function showAllBeers() {
-  request.get('/allBrews')
-  .end(function(err, res){
-    var list = allBrews({data:res.body})
-    document.body.innerHTML = list
+// function showAllBeers() {
+//   request.get('/allBrews')
+//   .end(function(err, res){
+//     var list = allBrews({data:res.body})
+//     document.body.innerHTML = list
 
 
   //   $('.viewBtn').click(function(e){
@@ -23,8 +23,8 @@ function showAllBeers() {
   //     var id = e.target.id
   //     getAndShowProfile(id)
   //   })
-  // })
-}
+//   // })
+// }
 
 // function getAndShowProfile(id) {
 //   request.get('/brews/'+id)
