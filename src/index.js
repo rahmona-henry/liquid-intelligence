@@ -18,22 +18,22 @@ function showAllBeers() {
     document.body.innerHTML = list
 
 
-    $('.viewBtn').click(function(e){
-      e.preventDefault()
-      var id = e.target.id
-      getAndShowProfile(id)
-    })
-  })
+  //   $('.viewBtn').click(function(e){
+  //     e.preventDefault()
+  //     var id = e.target.id
+  //     getAndShowProfile(id)
+  //   })
+  // })
 }
 
-function getAndShowProfile(id) {
-  request.get('/brews/'+id)
-  .end(function(err, res){
-    // console.log(res.body)
-    var htmlFromTemplate = beerProfile(res.body)
-    document.body.innerHTML = htmlFromTemplate;
-    $('#backBtn').click(function(){
-      showAllBeers()
-    })
-  })
+// function getAndShowProfile(id) {
+//   request.get('/brews/'+id)
+//   .end(function(err, res){
+//     // console.log(res.body)
+//     var htmlFromTemplate = beerProfile(res.body)
+//     document.body.innerHTML = htmlFromTemplate;
+//     $('#backBtn').click(function(){
+//       showAllBeers()
+//     })
+//   })
 })
