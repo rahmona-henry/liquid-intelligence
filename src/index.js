@@ -18,11 +18,12 @@ function showAllBeers() {
     var list = allBrews({data:res.body})
     document.body.innerHTML = list
 
-    // $(.viewBtn).click(function(e){
+     $('#viewBtn').click(function(){
+       console.log('view button is getting clicked')
     //   e.preventDefault()
     //   var id = e.target.id
     //   getAndShowProfile(id)
-    // })
+    })
   })
 }
 
