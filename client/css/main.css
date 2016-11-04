@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body.homepage {
-    background-image: url('/images/beer.jpeg');
+  background-image: url('/images/beer.jpeg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -257,22 +257,6 @@ body.brews {
 
 }
 
-
-.logo4 p {
-  border-radius: 40px;
-  border-color: #000000;
-  border: 3px solid #000000;
-  height:80px;
-  width: 500px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
-  text-align: center;
-  float:right;
-  top:100px;
-  right:30px;
-  position:relative;
-
-}
 
  a {
   color:#000000;

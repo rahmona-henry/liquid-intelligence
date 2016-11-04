@@ -23,7 +23,7 @@
             <ul>
                {{#each data}}
                <h5>{{brewName}}</h5>
-               <button class='button button-primary' id='viewBtn'>view</button>
+               <button class='viewBtn button button-primary' id={{this.id}}>view</button>
                {{/each}}
             </ul>
               <a class='button button-primary' href='userHome'>home</a>

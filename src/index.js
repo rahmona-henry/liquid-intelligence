@@ -18,10 +18,11 @@ function showAllBeers() {
     var list = allBrews({data:res.body})
     document.body.innerHTML = list
 
-     $('#viewBtn').click(function(){
-       console.log('view button is getting clicked')
-    //   e.preventDefault()
-    //   var id = e.target.id
+     $('.viewBtn').click(function(e){
+       e.preventDefault()
+       var id = e.target.id
+       console.log('this is the id', e.target.id)
+
     //   getAndShowProfile(id)
     })
   })
