@@ -21,15 +21,15 @@ function showAllBeers() {
      $('.viewBtn').click(function(e){
        e.preventDefault()
        var id = e.target.id
-       console.log('this is the id', e.target.id)
        getAndShowProfile(id)
     })
   })
 }
 
 function getAndShowProfile(id) {
-   request.get('/beers/'+id)
+   request.get('/brews/'+id)
    .end(function(err,res){
+     console.log('this is res', res)
    var htmlFromTemplate = brewProfile(res.body)
    document.body.innerHTML = htmlFromTemplate
    $('#backBtn').click(function(){

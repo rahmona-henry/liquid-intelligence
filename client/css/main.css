@@ -172,14 +172,14 @@ body.profile {
 
 .brewprofile {
   position:relative;
-  border: 3px solid #000000;
+  border: 3px solid #ffffff;
   border-radius: 35px;
   margin: 0 auto;
   padding:25px;
-  height:450px;
-  width: 400px;
-  color:#000000;
-  
+  height:850px;
+  width: 500px;
+  color:#ffffff;
+
 }
 
 .userOptions a {

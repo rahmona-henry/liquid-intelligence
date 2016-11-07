@@ -63,7 +63,7 @@ app.get('/allBrews', function(req, res){
 })
 
 app.get('/brews/:id', function(req, res){
-  knex('brews').where('id',req.params.id)
+  knex('brews').where('id',req.params)
   .then(function(data){
     var brew = data[0]
     res.json(brew)
