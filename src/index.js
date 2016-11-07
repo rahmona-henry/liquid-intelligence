@@ -22,19 +22,18 @@ function showAllBeers() {
        e.preventDefault()
        var id = e.target.id
        console.log('this is the id', e.target.id)
-
-    //   getAndShowProfile(id)
+       getAndShowProfile(id)
     })
   })
 }
 
-// function getAndShowProfile(id) {
-//   request.get('/beers/'+id)
-//   .end(function(err,res){
-//     var htmlFromTemplate = brewProfile(res.body)
-//     document.body.innerHTML = htmlFromTemplate
-//     $('#backBtn').click(function(){
-//       showAllBeers()
-//     })
-//   })
-// }
+function getAndShowProfile(id) {
+   request.get('/beers/'+id)
+   .end(function(err,res){
+   var htmlFromTemplate = brewProfile(res.body)
+   document.body.innerHTML = htmlFromTemplate
+   $('#backBtn').click(function(){
+   showAllBeers()
+     })
+   })
+ }
