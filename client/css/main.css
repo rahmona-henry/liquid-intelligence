@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body.homepage {
-  background-image: url('/images/beer.jpeg');
+  /*background-image: url('/images/beer.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -14,7 +14,7 @@ body.homepage {
 
 
 body.joinup {
-  background-image: url('/images/legs.jpeg');
+  /*background-image: url('/images/legs.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +26,7 @@ body.joinup {
 }
 
 body.fire {
-  background-image: url('/images/timber.jpeg');
+  /*background-image: url('/images/timber.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,7 +39,7 @@ body.fire {
 
 
 body.goodbye {
-  background-image: url('/images/backdrop.jpeg');
+  /*background-image: url('/images/backdrop.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -53,7 +53,7 @@ body.goodbye {
 
 
 body.newBeer {
-  background-image: url('/images/still.jpeg');
+  /*background-image: url('/images/still.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -89,7 +89,7 @@ body.brews {
 }
 
 body.profile {
-  /*background-image: url('/images/oiche.jpeg');*/
+  background-image: url('/images/oiche.jpeg');
   background-color: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -112,43 +112,44 @@ body.profile {
 
 .login {
   position:relative;
-  border: 3px solid #ffffff;
+  border: 3px solid #000000;
   border-radius: 35px;
   margin: 0 auto;
   padding:25px;
   height:450px;
   width: 400px;
+  color: #000000;
 }
 
 
 
 .signUp {
     position:relative;
-    border: 3px solid #ffffff;
+    border: 3px solid #000000;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 400px;
-    color:#ffffff;
+    color:#000000;
 }
 
 
 .userOptions {
     position:relative;
-    border: 3px solid #ffffff;
+    border: 3px solid #000000;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 450px;
-    color:#ffffff;
+    color:#000000;
 }
 
 
 .newbrewForm {
   position:relative;
-  border: 3px solid #ffffff ;
+  border: 3px solid #000000;
   border-radius: 35px;
   margin: 0 auto;
   padding:25px;
@@ -176,9 +177,9 @@ body.profile {
   border-radius: 35px;
   margin: 0 auto;
   padding:25px;
-  height:850px;
+  height:950px;
   width: 500px;
-  color:#ffffff;
+  color:#000000;
 
 }
 
@@ -196,13 +197,13 @@ body.profile {
 
 .exit {
     position:relative;
-    border: 3px solid #ffffff;
+    border: 3px solid #000000;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:150px;
     width: 400px;
-    color:#ffffff;
+    color:#000000;
 }
 
 .allbrews {
@@ -211,19 +212,19 @@ body.profile {
     padding:25px;
     height:650px;
     width: 400px;
-    color:#ffffff;
+    color:#000000;
 }
 
-. {
+/*. {
     position:relative;
-    border: 3px solid #ffffff;
+    border: 3px solid #000000;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 450px;
-    color:#ffffff;
-}
+    color:#000000;
+}*/
 
 
 .exit a {
@@ -231,8 +232,8 @@ body.profile {
 }
 .logo p {
   border-radius: 40px;
-  border-color: #ffffff;
-  border: 3px solid #ffffff;
+  border-color: #000000;
+  border: 3px solid #000000;
   height:80px;
   width: 500px;
   font-family: 'Roboto', sans-serif;
@@ -242,13 +243,14 @@ body.profile {
   top:100px;
   right:30px;
   position:relative;
+  color:#000000;
 
 }
 
 .logo1 p {
   border-radius: 40px;
-  border-color: #ffffff;
-  border: 3px solid #ffffff;
+  border-color: #000000;
+  border: 3px solid #000000;
   height:80px;
   width: 500px;
   font-family: 'Roboto', sans-serif;
@@ -259,8 +261,7 @@ body.profile {
   right:40px;
   /*position:relative;*/
   margin-right: 25px;
-  color:#ffffff;
-
+  color:#000000;
 }
 
 
@@ -293,3 +294,22 @@ form input {
   font-family: 'Roboto', sans-serif;
   color:#000000;
 }
+
+
+input[type="email"] {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+  input[type="password"] {
+    height: 38px;
+    padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+    background-color: #fff;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    box-shadow: none;
+    box-sizing: border-box; }
