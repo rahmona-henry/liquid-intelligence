@@ -101,15 +101,23 @@ body.profile {
   overflow: hidden;
 }
 
+
+
 .container {
     text-align: center;
-    position: fixed;
+    /*position: fixed;*/
   	top: 50%;
-  	transform: translateY(-50%);
+  	/*transform: translateY(-50%);*/
   	width: 100%;
     margin: 0 auto;
 }
 
+
+
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
 .login {
   position:relative;
   border: 3px solid #000000;
