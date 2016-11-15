@@ -45,8 +45,8 @@ app.get('/userHome', function(req, res){
   res.render('userHome', {emailId:req.session.emailId})
 })
 
-app.get('/newBrew', function(req, res){
-    res.render('newBrew', {emailId:req.session.emailId})
+app.get('/newRecipe', function(req, res){
+    res.render('newRecipe', {emailId:req.session.emailId})
 
 })
 
