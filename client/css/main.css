@@ -249,9 +249,10 @@ body.profile {
   text-align: center;
   float:right;
   top:100px;
-  right:30px;
-  position:relative;
+  margin-right:30px;
+  /*position:relative;*/
   color:#000000;
+
 
 }
 
