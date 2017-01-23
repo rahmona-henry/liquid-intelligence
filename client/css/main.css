@@ -13,7 +13,7 @@ body.homepage {
 }
 
 
-body.joinup {
+/*body.joinup {
   /*background-image: url('/images/legs.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -23,7 +23,7 @@ body.joinup {
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   overflow: hidden;
-}
+}*/
 
 body.fire {
   /*background-image: url('/images/timber.jpeg');*/
@@ -117,7 +117,8 @@ body.profile {
 .section {
   padding: 8rem 0 7rem;
   text-align: center;
-}
+  }
+
 .login {
   position:relative;
   border: 3px solid #000000;
@@ -128,7 +129,6 @@ body.profile {
   width: 400px;
   color: #000000;
 }
-
 
 
 .signUp {
@@ -255,7 +255,7 @@ body.profile {
 
 
 }
-
+/*
 .logo1 p {
   border-radius: 40px;
   border-color: #000000;
@@ -268,12 +268,12 @@ body.profile {
   float:right;
   top:100px;
   right:40px;
-  /*position:relative;*/
+  /*position:relative;
   margin-right: 25px;
   color:#000000;
-}
+}*/
 
-
+/*
 .logo3 p {
   border-radius: 40px;
   border-color: #000000;
@@ -288,7 +288,7 @@ body.profile {
   right:30px;
   position:relative;
 
-}
+}*/
 
 
  a {
