@@ -27,7 +27,7 @@ body.joinup {
 
 body.fire {
   /*background-image: url('/images/timber.jpeg');*/
-  -webkit-background-size: cover;
+  webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
