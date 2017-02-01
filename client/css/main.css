@@ -237,11 +237,13 @@ body.profile {
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
   text-align: center;
-  float:right;
+  /*float:right;*/
   top:100px;
-  margin-right:30px;
+  margin:0 auto;
   /*position:relative;*/
   color:#000000;
+  /*background-color: #000000;*/
+
 
 
 }
