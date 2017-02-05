@@ -9,6 +9,7 @@
 </head>
 
 <body class='newBeer'>
+
     <div class='section hero'>
       <div class='logo'>
         <div class='row'>
@@ -17,15 +18,15 @@
   </div>
 </div>
 
-  <div class='u-max-full-width container'>
-    <div class='newbrewForm'>
 
-       <div class='row'>
-        <h2>create a new brew.</h2>
-         <form action='/newBrew' method='POST'>
+  <div class='u-max-full-width container'>
+      <div class='newbrewForm'>
+        <div class='row'>
+         <h2>create a new brew.</h2>
           </div>
 
-        <div class='row'>
+          <form action='/newBrew' method='POST'>
+           <div class='row'>
           <div class='six columns'>
            <h6><b><label for='newBrew'>brew name</label></b></h6>
            <input class='u-full-width' placeholder='name' type='text' name='brewName'>
@@ -74,8 +75,8 @@
 </div>
 
   <div class='row'>
-   <div class='six columns'>
-    <h6><b><label for='mashTime'>mash time</label></b></h6>
+   <div class='six columns'>;
+     <h6><b><label for='mashTime'>mash time</label></b></h6>
      <input class='u-full-width' type='text' placeholder='mash time' name='mashTime'>
     </div>
 
@@ -84,7 +85,7 @@
       <input class='u-full-width' type='text' placeholder='boil time' name='boilTime'>
       </div>
       </div>
-<!-- 
+
    <div class='row'>
     <div class='six columns'>
      <h6><b><label for='originalGravity'>original gravity</label></b></h6>
@@ -129,11 +130,13 @@
   </div>
   <br>
         <input class='button button-primary' type='submit' value='add'>
-          <a class='button button-primary' href='/'>home</a> -->
+          <a class='button button-primary' href='/'>home</a>
+
+
+            </div>
+
 </form>
 
-  </div>
-  </div>
 <script src='app.js'></script>
 </body>
 </html>

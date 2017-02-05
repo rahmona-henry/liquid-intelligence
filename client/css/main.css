@@ -60,7 +60,7 @@ body.newBeer {
   background-size: cover;
   height:100%;
   font-family: 'Roboto', sans-serif;
-  color: #000000;
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -112,7 +112,10 @@ body.profile {
     margin: 0 auto;
 }
 
-
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 .section {
   padding: 8rem 0 7rem;
@@ -162,10 +165,8 @@ body.profile {
   margin: 0 auto;
   padding:25px;
   color:#000000;
-  /*height:100%;*/
+  height:100%;
   width:50%;
-  opacity: 1;
-
 }
 
 .brew {
