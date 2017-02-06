@@ -155,14 +155,14 @@ body.profile {
 
 
 .newbrewForm {
-  /*overflow:scroll;*/
+  overflow:scroll;
   position:relative;
   border: 3px solid #000000;
   border-radius: 35px;
   margin: 0 auto;
   padding:20px;
   color:#000000;
-  height:100%;
+  height:70%;
   width:50%;
 
 }

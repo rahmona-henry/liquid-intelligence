@@ -21,9 +21,8 @@
 
   <div class='u-max-full-width container'>
       <div class='newbrewForm'>
-        <div class='row'>
-         <h5>create a new brew.</h5>
-          </div>
+         <b><p>create a new brew.</p></b>
+
 
           <form action='/newBrew' method='POST'>
 
@@ -63,17 +62,19 @@
       </div>
       </div>
 
-    <div class='row'>
-      <div class='six columns'>
-       <p><b><label for='mashTemperature'>mash temperature</label></b></p>
-        <input class='u-full-width' type='number' placeholder='mash temperature' name='mashTemperature'>
+
+      <div class='row'>
+       <div class='six columns'>
+        <p><b><label for='mashTemperature'>mash temperature</label></b></p>
+         <input class='u-full-width' type='number' placeholder='mash temperature' name='mashTemperature'>
           </div>
 
-    <div class='six columns'>
-      <p><b><label for='fermentTemperature'>fermentation temperature</label></b><p>
-        <input class='u-full-width' type='number' placeholder='fermentation temperature' name='fermentTemperature'>
-          </div>
-          </div>
+         <div class='six columns'>
+          <p><b><label for='fermentTemperature'>fermentation temperature</label></b></p>
+          <input class='u-full-width' type='number' placeholder='fermentation temperature' name='fermentTemperature'>
+           </div>
+           </div>
+
 
    <div class='row'>
     <div class='six columns'>
@@ -106,8 +107,8 @@
       </div>
      </div>
          -->
-
-    <!-- <div class='row'>
+<!-- 
+    <div class='row'>
       <div class='six columns'>
       <h6><b><label for='brewIngredients'>brew ingredients</label></b><h6>
       <textarea class='u-full-width' placeholder='ingredients' type='text' name='brewIngredients'></textarea>
@@ -117,8 +118,8 @@
       <h6><b><label for='brewingProcess'>brewing process</label></b></h6>
       <textarea class='u-full-width' placeholder='process' type='text' name='brewingProcess'></textarea>
     </div>
-   </div> -->
-
+   </div>
+ -->
 
     <!-- <div class='six columns'>
     <h6><b><label for='bottlingDate'>bottling date</label></b></h6>
@@ -131,15 +132,13 @@
     <h6><b><label for='tasting notes'>tasting notes</label></b></h5>
       <textarea class='u-full-width' placeholder='tasting notes' type='text' name='tastingNotes'></textarea>
    </div> -->
-<!-- s</div> -->
-  <br>
+<!-- </div> -->
+
+<br>
         <input class='button button-primary' type='submit' value='add'>
-          <a class='button button-primary' href='/'>home</a>
         </form>
-
-
-            </div>
-         </div>
+    </div>
+</div>
 
 <script src='app.js'></script>
 </body>
