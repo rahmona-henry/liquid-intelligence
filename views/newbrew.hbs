@@ -10,132 +10,166 @@
 
 <body class='newBeer'>
 
-    <div class='section hero'>
-      <div class='logo'>
-        <div class='row'>
-         <p>liquid intelligence</p>
+  <div class='section hero'>
+    <div class='logo'>
+      <div class='row'>
+        <p>liquid intelligence</p>
+      </div>
     </div>
   </div>
-</div>
 
 
   <div class='u-max-full-width container'>
-      <div class='newbrewForm'>
-         <b><p>create a new brew.</p></b>
+    <div class='newbrewForm'>
+      <b><p>create a new brew.</p></b>
 
 
-          <form action='/newBrew' method='POST'>
+      <form action='/newBrew' method='POST'>
 
-           <div class='row'>
-            <div class='four columns'>
-             <p><b><label for='newBrew'>brew name</label></b></p>
-              <input class='u-full-width' placeholder='name' type='text' name='brewName'>
-           </div>
-           <div class='four columns'>
+        <div class='row'>
+          <div class='four columns'>
+            <p><b><label for='newBrew'>brew name</label></b></p>
+            <input class='u-full-width' placeholder='name' type='text' name='brewName'>
+          </div>
+          <div class='four columns'>
             <p><b><label for='brewStyle'>brew style</label></b></p>
             <input class='u-full-width' placeholder='style' type='text' name='brewStyle'>
           </div>
           <div class='four columns'>
-          <p><b><label for='brewer'>brewer</label></b></p>
-          <input class='u-full-width' placeholder='brewer' type='text' name='brewer'>
-         </div>
-            </div>
-
-    <div class='row'>
-    <div class='four columns'>
-    <p><b><label for='brewDate'>brew date</label></b></p>
-   <input class='u-full-width' placeholder='brew date' type='date' name='brewDate'>
-   </div>
-   <div class='four columns'>
-   <p><b><label for='mashTime'>mash time</label></b></p>
-   <input class='u-full-width' type='text' placeholder='mash time' name='mashTime'>
-   </div>
-   <div class='four columns'>
-     <p><b><label for='boilTime'>boil time</label></b></p>
-      <input class='u-full-width' type='text' placeholder='boil time' name='boilTime'>
-      </div>
-      </div>
-
-
-      <div class='row'>
-       <div class='six columns'>
-        <p><b><label for='mashTemperature'>mash temperature</label></b></p>
-         <input class='u-full-width' type='number' placeholder='mash temperature' name='mashTemperature'>
+            <p><b><label for='brewer'>brewer</label></b></p>
+            <input class='u-full-width' placeholder='brewer' type='text' name='brewer'>
           </div>
-
-         <div class='six columns'>
-          <p><b><label for='fermentTemperature'>fermentation temperature</label></b></p>
-          <input class='u-full-width' type='number' placeholder='fermentation temperature' name='fermentTemperature'>
-           </div>
-           </div>
-
-
-   <div class='row'>
-    <div class='four columns'>
-     <p><b><label for='originalGravity'>original gravity</label></b></p>
-      <input class='u-full-width' type='number' placeholder='original gravity' name='original'>
-       </div>
-
-      <div class='four columns'>
-       <p><b><label for='finalGravity'>final gravity</label></b></p>
-       <input class='u-full-width' type='number' placeholder='final gravity' name='final'>
-        </div>
-        <div class='four columns'>
-        <h6><b><label for='batchNumber'>batch number</label></b></h6>
-       <input class='u-full-width' placeholder='batch number' type='number' name='batchNumber'>
-      </div>
         </div>
 
+        <div class='row'>
+          <div class='four columns'>
+            <p><b><label for='brewDate'>brew date</label></b></p>
+            <input class='u-full-width' placeholder='brew date' type='date' name='brewDate'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='malts'>malts</label></b></p>
+            <input class='u-full-width' type='text' placeholder='malts' name='malts'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='hops'>hops</label></b></p>
+            <input class='u-full-width' type='text' placeholder='hops' name='hops'>
+          </div>
+        </div>
 
-  <div class='row'>
-   <div class='six columns'>
-    <p><b><label for='batchYield'>batch size</label></b></p>
-      <input class='u-full-width' type="number" placeholder='batch size' name='batchSize'>
-     </div>
+        <div class='row'>
+          <div class='four columns'>
+            <p><b><label for='brewDate'>yeast</label></b></p>
+            <input class='u-full-width' placeholder='yeast' type='text' name='yeast'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='stikeVolume'>strike water volume</label></b></p>
+            <input class='u-full-width' type='number' placeholder='strike water volume' name='strikeVolume'>
+          </div>
+          <div class='six columns'>
+            <p><b><label for='mashTemperature'>mash temperature</label></b></p>
+            <input class='u-full-width' type='number' placeholder='mash temperature' name='mashTemperature'>
+          </div>
+        </div>
 
-    <div class='six columns'>
-     <p><b><label for='abv'>abv</label></b></p>
-     <input class='u-full-width' type='number' placeholder='abv' name='abv'>
-      </div>
-      </div>
+        <div class='row'>
+          <div class='four columns'>
+            <p><b><label for='mashTime'>mash time</label></b></p>
+            <input class='u-full-width' type='number' placeholder='mash time' name='mashTime'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='spargeWater'>sparge water volume</label></b></p>
+            <input class='u-full-width' placeholder='sparge water volume' type='number' name='spargeWater'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='spargeTemperature'>sparge water temperature</label></b></p>
+            <input class='u-full-width' type='number' placeholder='sparge water temperature' name='spargeTemperature'>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='four columns'>
+            <p><b><label for='boilVolume'>boil water volume</label></b></p>
+            <input class='u-full-width' type='number' placeholder='boil water volume' name='boilVolume'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='boilTime'>boil time</label></b></p>
+            <input class='u-full-width' type='number' placeholder='boil time' name='boilTime'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='originalGravity'>original gravity</label></b></p>
+            <input class='u-full-width' type='number' placeholder='original gravity' name='original'>
+          </div>
+        </div>
+
+
+        <div class='row'>
+          <div class='six columns'>
+            <p><b><label for='fermentTemperature'>fermentation temperature</label></b></p>
+            <input class='u-full-width' type='number' placeholder='fermentation temperature' name='fermentTemperature'>
+          </div>
+          <div class='four columns'>
+            <h6><b><label for='fermentTime'>fermentation time</label></b></h6>
+            <input class='u-full-width' placeholder='fermentation time' type='tect' name='fermentTime'>
+          </div>
+          <div class='four columns'>
+            <p><b><label for='finalGravity'>final gravity</label></b></p>
+            <input class='u-full-width' type='number' placeholder='final gravity' name='final'>
+          </div>        
+        </div>
+
+
+        <div class='row'>
+          <div class='four columns'>
+            <h6><b><label for='dextroseDosage'>dextrose dosage</label></b></h6>
+            <input class='u-full-width' placeholder='dextrose dosage' type='text' name='dextroseDosage'>
+          </div>
+          <div class='six columns'>
+            <p><b><label for='batchSize'>batch size</label></b></p>
+            <input class='u-full-width' type="number" placeholder='batch size' name='batchSize'>
+          </div>
+          <div class='six columns'>
+            <p><b><label for='abv'>abv</label></b></p>
+            <input class='u-full-width' type='number' placeholder='abv' name='abv'>
+          </div>
+        </div>
 
         <!-- <div class='six columns'>
         <h6><b><label for='batchNumber'>batch number</label></b></h6>
-       <input class='u-full-width' placeholder='batch number' type='number' name='batchNumber'>
+        <input class='u-full-width' placeholder='batch number' type='number' name='batchNumber'>
       </div>
-     </div>
-         -->
-<!--
-    <div class='row'>
-      <div class='six columns'>
-      <h6><b><label for='brewIngredients'>brew ingredients</label></b><h6>
-      <textarea class='u-full-width' placeholder='ingredients' type='text' name='brewIngredients'></textarea>
-      </div>
-
-     <div class='six columns'>
-      <h6><b><label for='brewingProcess'>brewing process</label></b></h6>
-      <textarea class='u-full-width' placeholder='process' type='text' name='brewingProcess'></textarea>
     </div>
-   </div>
- -->
+  -->
+  <!--
+  <div class='row'>
+  <div class='six columns'>
+  <h6><b><label for='brewIngredients'>brew ingredients</label></b><h6>
+  <textarea class='u-full-width' placeholder='ingredients' type='text' name='brewIngredients'></textarea>
+</div>
 
-    <!-- <div class='six columns'>
-    <h6><b><label for='bottlingDate'>bottling date</label></b></h6>
-    <input class='u-full-width' placeholder='bottling Date' type='date' name='bottlingDate'>
-   </div>
-  </div> -->
+<div class='six columns'>
+<h6><b><label for='brewingProcess'>brewing process</label></b></h6>
+<textarea class='u-full-width' placeholder='process' type='text' name='brewingProcess'></textarea>
+</div>
+</div>
+-->
 
-  <!-- <div class='row'>
-   <div class='six columns'>
-    <h6><b><label for='tasting notes'>tasting notes</label></b></h5>
-      <textarea class='u-full-width' placeholder='tasting notes' type='text' name='tastingNotes'></textarea>
-   </div> -->
+<!-- <div class='six columns'>
+<h6><b><label for='bottlingDate'>bottling date</label></b></h6>
+<input class='u-full-width' placeholder='bottling Date' type='date' name='bottlingDate'>
+</div>
+</div> -->
+
+<!-- <div class='row'>
+<div class='six columns'>
+<h6><b><label for='tasting notes'>tasting notes</label></b></h5>
+<textarea class='u-full-width' placeholder='tasting notes' type='text' name='tastingNotes'></textarea>
+</div> -->
 <!-- </div> -->
 
 <br>
-        <input class='button button-primary' type='submit' value='add'>
-        </form>
-    </div>
+<input class='button button-primary' type='submit' value='add'>
+</form>
+</div>
 </div>
 
 <script src='app.js'></script>
