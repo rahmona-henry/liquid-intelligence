@@ -65,7 +65,7 @@ body.newBeer {
 }
 
 body.options {
-  background-image: url('/images/oiche.jpeg');
+  /*background-image: url('/images/oiche.jpeg');*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -169,13 +169,13 @@ body.profile {
 
 .brew {
     position:relative;
-    border: 3px solid #ffffff;
+    border: 3px solid #000000;
     border-radius: 35px;
     margin: 0 auto;
     padding:25px;
     height:450px;
     width: 400px;
-    color:#ffffff;
+    color:#000000;
 }
 
 .brewprofile {
