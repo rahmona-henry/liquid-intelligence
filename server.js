@@ -45,7 +45,7 @@ app.get('/userHome', function(req, res){
   res.render('userHome', {emailId:req.session.emailId})
 })
 
-app.get('/newbrew', function(req, res){
+app.get('/newBrew', function(req, res){
     res.render('newbrew', {emailId:req.session.emailId})
 
 })
@@ -55,10 +55,11 @@ app.get('/brewOptions', function(req, res){
 })
 
 app.get('/allBrews', function(req, res){
-  knex.select().table('brews')
-  .then(function(data){
-    res.json(data)
-  })
+  console.log('this is req',req)
+  // knex.select().table('brews')
+  // .then(function(data){
+  //   res.json(data)
+  // })
 
 })
 
@@ -112,7 +113,7 @@ app.post('/signIn', function(req,res){
   })
 })
 
-app.post('/newbrew', function(req,res){
+app.post('/newBrew', function(req,res){
   knex('brews').insert({brewName:req.body.brewName, brewer:req.body.brewer, brewStyle:req.body.brewStyle,
                         batchNumber:req.body.batchNumber, brewIngredients:req.body.brewIngredients,
                         brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
