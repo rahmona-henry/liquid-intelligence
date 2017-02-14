@@ -2,7 +2,7 @@
 exports.up = function(knex, Promise) {
   console.log('create beertable')
 
-  return knex.schema.createTableIfNotExists('berrtable', function(table){
+  return knex.schema.createTableIfNotExists('beertable', function(table){
     table.increments('id');
     table.string('emailId');
     table.string('brewName');
