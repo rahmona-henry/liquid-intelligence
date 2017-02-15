@@ -114,12 +114,13 @@ app.post('/signIn', function(req,res){
 })
 
 app.post('/newBrew', function(req,res){
-  knex('brews').insert({brewName:req.body.brewName, brewer:req.body.brewer, brewStyle:req.body.brewStyle,
-                        batchNumber:req.body.batchNumber, brewIngredients:req.body.brewIngredients,
-                        brewingProcess:req.body.brewingProcess, brewDate:req.body.brewDate, bottlingDate:req.body.bottlingDate,
-                        mashTime:req.body.mashTime, boilTime:req.body.boilTime, original:req.body.original, final:req.body.final,
-                        mashTemperature:req.body.mashTemperature, fermentTemperature:req.body.fermentTemperature,
-                        batchSize:req.body.batchSize, abv:req.body.abv, tastingNotes:req.body.tastingNotes, emailId:req.session.emailId})
+  knex('brews').insert({emailId:req.session.emailId,brewName:req.body.brewName,brewStyle:req.body.brewStyle,brewer:req.body.brewer,
+                        brewDate:req.body.brewDate,malts:req.body.malts,hops:req.body.hops,
+                        yeast:req.body.yeast,strikeVolume:req.body.strikeVolume,mashTemperature:req.body.mashTemperature, mashTime:req.body.mashTime,
+                        mashTime:req.body.mashTime,spargeWater:req.body.spargeWater,spargeTemperature:req.body.spargeTemperature,
+                        boilVolume:req.body.boilVolume,boilTime:req.body.boilTime, original:req.body.original,
+                        fermentTemperature:req.body.fermentTemperature,fermentTime:req.body.fermentTime,
+                        final:req.body.final, dextroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize, abv:req.body.abv, })
                         .then(function(data){
                           res.render('brewOptions', {emailId:req.session.emailId})
                         })
