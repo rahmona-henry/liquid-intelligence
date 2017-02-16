@@ -1,8 +1,8 @@
 
 exports.up = function(knex, Promise) {
-  console.log('create beertable')
+  console.log('create beer')
 
-  return knex.schema.createTableIfNotExists('beertable', function(table){
+  return knex.schema.createTableIfNotExists('beer', function(table){
     table.increments('id');
     table.string('emailId');
     table.string('brewName');
@@ -32,8 +32,8 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists('beertable').then(function(){
-    console.log('beertable was dropped')
+  return knex.schema.dropTableIfExists('beer').then(function(){
+    console.log('beer was dropped')
   })
 
 };

@@ -115,7 +115,7 @@ app.post('/signIn', function(req,res){
 
 app.post('/newBrew', function(req,res){
   // console.log('this is req', req)
-  knex('beers').insert({emailId:req.session.emailId,brewName:req.body.brewName,brewStyle:req.body.brewStyle,brewer:req.body.brewer,
+  knex('beer').insert({emailId:req.session.emailId,brewName:req.body.brewName,brewStyle:req.body.brewStyle,brewer:req.body.brewer,
                         brewDate:req.body.brewDate,malts:req.body.malts,hops:req.body.hops,
                         yeast:req.body.yeast,strikeVolume:req.body.strikeVolume,mashTemperature:req.body.mashTemperature, mashTime:req.body.mashTime,
                         mashTime:req.body.mashTime,spargeWater:req.body.spargeWater,spargeTemperature:req.body.spargeTemperature,
