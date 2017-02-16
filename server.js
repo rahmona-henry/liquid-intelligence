@@ -113,23 +113,23 @@ app.post('/signIn', function(req,res){
   })
 })
 
-// app.post('/newBrew', function(req,res){
-//   console.log('this is req', req)
-//   knex('brews').insert({emailId:req.session.emailId,brewName:req.body.brewName,brewStyle:req.body.brewStyle,brewer:req.body.brewer,
-//                         brewDate:req.body.brewDate,malts:req.body.malts,hops:req.body.hops,
-//                         yeast:req.body.yeast,strikeVolume:req.body.strikeVolume,mashTemperature:req.body.mashTemperature, mashTime:req.body.mashTime,
-//                         mashTime:req.body.mashTime,spargeWater:req.body.spargeWater,spargeTemperature:req.body.spargeTemperature,
-//                         boilVolume:req.body.boilVolume,boilTime:req.body.boilTime, original:req.body.original,
-//                         fermentTemperature:req.body.fermentTemperature,fermentTime:req.body.fermentTime,
-//                         final:req.body.final, dextroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize, abv:req.body.abv})
-//                         .then(function(data){
-//                           res.render('brewOptions', {emailId:req.session.emailId})
-//                         })
-//                         .catch(function(error){
-//                           console.log('Error', error)
-//                           res.redirect('/')
-//                         })
-// })
+app.post('/newBrew', function(req,res){
+  // console.log('this is req', req)
+  knex('beers').insert({emailId:req.session.emailId,brewName:req.body.brewName,brewStyle:req.body.brewStyle,brewer:req.body.brewer,
+                        brewDate:req.body.brewDate,malts:req.body.malts,hops:req.body.hops,
+                        yeast:req.body.yeast,strikeVolume:req.body.strikeVolume,mashTemperature:req.body.mashTemperature, mashTime:req.body.mashTime,
+                        mashTime:req.body.mashTime,spargeWater:req.body.spargeWater,spargeTemperature:req.body.spargeTemperature,
+                        boilVolume:req.body.boilVolume,boilTime:req.body.boilTime, original:req.body.original,
+                        fermentTemperature:req.body.fermentTemperature,fermentTime:req.body.fermentTime,
+                        final:req.body.final, dextroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize, abv:req.body.abv})
+                        .then(function(data){
+                          res.render('brewOptions', {emailId:req.session.emailId})
+                        })
+                        .catch(function(error){
+                          console.log('Error', error)
+                          res.redirect('/')
+                        })
+})
 
 
 /////////// Listen Route //////////////
