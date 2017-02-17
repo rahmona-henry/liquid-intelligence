@@ -27,7 +27,6 @@ exports.up = function(knex, Promise) {
     table.string('batchSize');
     table.integer('abv');
 
-
   })
 };
 

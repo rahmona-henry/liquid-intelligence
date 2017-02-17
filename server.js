@@ -114,7 +114,7 @@ app.post('/signIn', function(req,res){
 })
 
  app.post('/newBrew', function(req,res){
-   console.log('this is req.session,req.body', req.session, req.body)
+  //  console.log('this is req.session,req.body', req.session, req.body)
      knex('beer').insert({
        emailId:req.session.emailId,brewName:req.body.brewName,
        brewStyle:req.body.brewStyle,brewer:req.body.brewer,
@@ -128,6 +128,7 @@ app.post('/signIn', function(req,res){
        dextroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize,abv:req.body.abv
                          })
                            .then(function(data){
+                             console.log('this is data', data)
                            res.render('brewOptions', {emailId:req.session.emailId})
                          })
                          .catch(function(error){
