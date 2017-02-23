@@ -18,17 +18,17 @@
      </div>
     </div>
   <div class='u-max-full-width container'>
-      <div class='allbrews'>
-          <div class='row'>
+      <!-- <div class='allbrews'>
+          <div class='row'> -->
             <ul>
                {{#each data}}
                <h5>{{brewName}}</h5>
-               <button class='viewBtn button button-primary' id={{this.id}}>view</button>
+               <a class='viewBtn' data-id={{this.id}} href=''>view</button>
                {{/each}}
             </ul>
-              <a class='button button-primary' href='userHome'>home</a>
-    </div>
-  </div>
+              <!-- <a class='button button-primary' href='userHome'>home</a> -->
+    <!-- </div>
+  </div> -->
 </div>
   <script src='app.js'></script>
   </body>
