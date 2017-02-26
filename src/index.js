@@ -15,6 +15,7 @@ $(document).ready(function(){
 function showAllBeers() {
   request.get('/allBrews')
   .end(function(err,res){
+    console.log('this is res',res)
     var list = allBrews({data:res.body})
     document.body.innerHTML = list
 
