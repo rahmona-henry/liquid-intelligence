@@ -41,7 +41,7 @@ app.get('/signIn', function(req,res){
   res.render('signIn')
 })
 
-app.get('http://localhost:3000/api/v1/userHome', function(req, res){
+app.get('/userHome', function(req, res){
   res.render('userHome', {emailId:req.session.emailId})
 })
 
