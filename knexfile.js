@@ -9,15 +9,8 @@ module.exports = {
     }
   },
 
-  staging: {
-    client: 'pg',
-    connection: {
-      database: 'liquid',
-    }
-  },
-
   production: process.env.DATABASE_URL || {
-    client: 'pg',
+    client: 'postgresql',
     connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
