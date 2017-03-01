@@ -1,8 +1,8 @@
-var allBrews = require('../views/allBrews.hbs')
-var brewProfile = require('../views/brewProfile.hbs')
-var userHome = require('../views/userHome.hbs')
-var brewOptions = require('../views/brewOptions.hbs')
-var request = require('superagent')
+var allBrews = require('../views/allBrews.hbs');
+var brewProfile = require('../views/brewProfile.hbs');
+var userHome = require('../views/userHome.hbs');
+var brewOptions = require('../views/brewOptions.hbs');
+var request = require('superagent');
 var handlebars = require('handlebars');
 var $ = require('jquery')
 
@@ -15,7 +15,7 @@ $(document).ready(function(){
 function showAllBeers() {
   request.get('/allBrews')
   .end(function(err,res){
-    console.log('this is res',res)
+    // console.log('this is res',res)
     var list = allBrews({data:res.body})
     document.body.innerHTML = list
 

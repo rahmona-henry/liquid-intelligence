@@ -8,7 +8,7 @@ var KnexSessionStore = require('connect-session-knex')(session)
 var store = new KnexSessionStore({knex: knex})
 
 app.use(express.static('client'))
-app.set('views',path.join(__dirname,'views'))
+// app.set('views',path.join(__dirname,'views'))
 
 
 app.use(bodyParser.urlencoded({extended:true}))
