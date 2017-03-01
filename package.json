@@ -6,11 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js",
-
     "build": "browserify -t hbsfy ./src/index.js -g uglifyify > ./client/app.js",
     "serve": "node-dev server.js",
     "watch": "watchify -t hbsfy ./src/index.js -o ./client/app.js -dev",
-    "postinstall":"knex migrate:latest"
+    "postinstall": "knex migrate:latest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
     "connect-session-knex": "^1.3.0",
     "express": "^4.14.0",
     "express-session": "^1.14.0",
+    "handlebars": "^4.0.6",
     "hbs": "^4.0.0",
     "hbsfy": "^2.7.0",
     "jquery": "^3.1.0",
