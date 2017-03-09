@@ -10,7 +10,6 @@
 <body>
 
   <body class='brews'>
-  <body>
      <div class='section hero'>
       <div class='logo'>
         <div class='row'>
@@ -18,19 +17,22 @@
        </div>
      </div>
     </div>
-  <div class='u-max-full-width container'>
-           <div class='allbrews'>
-          <div class='row'>
+
+    <div class='allbrews'>
+     <div class='u-max-full-width container'>
+        <div class='row'>
             <ul>
                {{#each data}}
                <h3>{{brewName}}</h3>
-               <a class='viewBtn' id={{this.id}} href='#'>view</a>
+               <a class='viewBtn' id={{this.id}} href='#  '>view</a>
                {{/each}}
             </ul>
-              <a class='button button-primary' href='userHome'>home</a>
-    </div>
   </div>
+  <a class='button button-primary' href='userHome'>home</a>
+
  </div>
+</div>
+
   <script src='app.js'></script>
   </body>
   </html>
