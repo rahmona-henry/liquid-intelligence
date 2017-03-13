@@ -30,7 +30,6 @@ function showAllBeers() {
 function getAndShowProfile(id) {
    request.get('/brews/'+id)
    .end(function(err,res){
-       console.log('this is res.body', res.body)
    var htmlFromTemplate = brewProfile(res.body)
    document.body.innerHTML = htmlFromTemplate
    $('#backBtn').click(function(){
