@@ -19,22 +19,22 @@ function showAllBeers() {
     var list = allBrews({data:res.body})
     document.body.innerHTML = list
 
-    //  $('.viewBtn').click(function(e){
-    //    e.preventDefault()
-    //    var id = e.target.id
-    //    getAndShowProfile(id)
-    // })
+     $('.viewBtn').click(function(e){
+       e.preventDefault()
+       var id = e.target.id
+       getAndShowProfile(id)
+    })
   })
 }
 
-// function getAndShowProfile(id) {
-//    request.get('/brews/'+id)
-//    .end(function(err,res){
-//      console.log('this is res', res)
-//    var htmlFromTemplate = brewProfile(res.body)
-//    document.body.innerHTML = htmlFromTemplate
-//    $('#backBtn').click(function(){
-//    showAllBeers()
-//      })
-//    })
-//  }
+function getAndShowProfile(id) {
+   request.get('/brews/'+id)
+   .end(function(err,res){
+       console.log('this is res.body', res.body)
+   var htmlFromTemplate = brewProfile(res.body)
+   document.body.innerHTML = htmlFromTemplate
+   $('#backBtn').click(function(){
+   showAllBeers()
+     })
+   })
+ }
