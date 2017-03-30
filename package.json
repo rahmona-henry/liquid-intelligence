@@ -24,7 +24,7 @@
     "url": "https://github.com/rahmona-henry/liquid-intelligence/issues"
   },
   "homepage": "https://github.com/rahmona-henry/liquid-intelligence#readme",
-  "devDependencies": {
+  "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
@@ -35,17 +35,13 @@
     "hbs": "^4.0.0",
     "hbsfy": "^2.7.0",
     "jquery": "^3.1.0",
-    "knex": "^0.12.6",
+    "knex": "^0.12.8",
     "path": "^0.12.7",
     "pg": "^6.1.2",
     "sqlite3": "^3.1.8",
     "superagent": "^2.2.0",
     "uglifyify": "^3.0.2",
-    "watchify": "^3.7.0",
-    "knex": "^0.12.8"
-  },
-  "dependencies": {
-    "knex": "^0.12.8",
-    "pg": "^6.1.5"
+    "watchify": "^3.7.0"
   }
+
 }
