@@ -29,7 +29,7 @@ var knex = require('knex')(knexConfig[env])
 
  ////////// GET ROUTES //////////
 
-app.get('index.html', function(req,res){
+app.get('index.html ', function(req,res){
   res.send('signIn')
 })
 
