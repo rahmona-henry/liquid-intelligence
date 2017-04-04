@@ -140,6 +140,4 @@ app.post('/signIn', function(req,res){
 
 /////////// Listen Route //////////////
 var port = process.env.PORT || 3000
-app.listen(port, function(){
-  console.log('We have lift off on port 3000!')
-})
+app.listen(port)
