@@ -125,7 +125,7 @@ app.post('/signIn', function(req,res){
        boilVolume:req.body.boilVolume,boilTime:req.body.boilTime,
        original:req.body.original,fermentTemperature:req.body.fermentTemperature,
        fermentTime:req.body.fermentTime,final:req.body.final,
-       dexheroku ps:scale web=1roseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize,abv:req.body.abv
+       dextroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize,abv:req.body.abv
                          })
                            .then(function(data){
                             //  console.log('this is data', data)
