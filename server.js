@@ -13,7 +13,7 @@ app.use(express.static('client'))
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
-
+app.set('port', (process.env.PORT || 3000));
 app.use(session({
   secret: 'liquid network',
   saveUninitialized: true,
@@ -125,7 +125,7 @@ app.post('/signIn', function(req,res){
        boilVolume:req.body.boilVolume,boilTime:req.body.boilTime,
        original:req.body.original,fermentTemperature:req.body.fermentTemperature,
        fermentTime:req.body.fermentTime,final:req.body.final,
-       dexroseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize,abv:req.body.abv
+       dexheroku ps:scale web=1roseDosage:req.body.dextroseDosage,batchSize:req.body.batchSize,abv:req.body.abv
                          })
                            .then(function(data){
                             //  console.log('this is data', data)
@@ -141,5 +141,5 @@ app.post('/signIn', function(req,res){
 /////////// Listen Route //////////////
 var port = process.env.PORT || 3000
 app.listen(port, function(){
-  console.log('We have lift off on port 3000!')
+  console.log('We have lift off on port' + port)
 })
