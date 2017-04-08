@@ -12,7 +12,6 @@
     "serve": "node-dev server.js",
     "watch": "watchify -t hbsfy ./src/index.js -o ./client/app.js -dev",
     "postinstall": "knex migrate:latest"
-
   },
   "repository": {
     "type": "git",
@@ -41,6 +40,7 @@
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "pg": "^6.1.2",
+    "sqlite3": "^3.1.8",
     "superagent": "^2.2.0",
     "uglifyify": "^3.0.2",
     "watchify": "^3.7.0",
