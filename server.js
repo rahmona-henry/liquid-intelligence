@@ -22,7 +22,7 @@ app.use(session({
 }))
 
 var knexConfig = require('./knexfile')
-var env = process.env.NODE_ENV || 'production'
+var env = process.env.NODE_ENV || 'development'
 var knex = require('knex')(knexConfig[env])
 
 
