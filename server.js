@@ -93,8 +93,9 @@ app.post('/signUp', function(req,res){
 })
 
 app.post('/signIn', function(req,res){
-  knex('users').where('email',req.body.email)
+  knex('users').where({email:req.body.email})
     .then(function(data){
+      
      if(req.body.email === ''){
        res.redirect('/')
      }

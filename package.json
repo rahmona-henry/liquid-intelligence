@@ -2,15 +2,12 @@
   "name": "liquid-intelligence",
   "version": "1.0.0",
   "description": "An online repository for my nano brewery recipes.",
-  "engine": {
-    "node": "6.9.2"
-  },
   "main": "server.js",
   "scripts": {
-    
+  "postinstall": "npm run build",
    "start": "node server.js",
    "start-dev": "nodemon server.js",
-    "build": "browserify -t hbsfy ./src/index.js -o uglifyify > ./client/app.js -dv",
+    "build": "browserify -t hbsfy ./src/index.js -o ./client/app.js -dv",
     "serve": "node-dev server.js",
     "watch": "watchify -t hbsfy ./src/index.js -o ./client/app.js -dv"
   },
