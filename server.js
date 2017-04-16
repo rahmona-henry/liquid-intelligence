@@ -10,7 +10,7 @@ var Knex = require('knex')
 
 app.use(express.static('client'))
 app.set('views',path.join(__dirname,'views'))
-app.engine('hbs', handlebars.engine);
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
