@@ -11,7 +11,7 @@ var Knex = require('knex')
 app.use(express.static('client'))
 app.set('views',path.join(__dirname,'views'))
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
 app.set('port', (process.env.PORT || 3000));
@@ -85,6 +85,7 @@ app.post('/signUp', function(req,res){
    var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
        .then(function(data){
+         console.log('req.body.hashed_password', req.body.hashed_password)
          req.session.emailId = req.body.email
          res.render('userHome',{emailId:req.session.emailId})
   })
@@ -101,8 +102,9 @@ app.post('/signIn', function(req,res){
      if(req.body.email === ''){
        res.redirect('/')
      }
+
      else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
-       req.session.emailId = data[0].email
+             req.session.emailId = data[0].email
        res.redirect('userHome')
      }
      else {
