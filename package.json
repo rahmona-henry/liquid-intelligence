@@ -4,7 +4,7 @@
   "description": "An online repository for my nano brewery recipes.",
   "main": "server.js",
   "scripts": {
-  "postinstall": "npm run build",
+  "preinstall": "npm run build",
    "start": "node server.js",
    "start-dev": "nodemon server.js",
     "build": "browserify -t hbsfy ./src/index.js -o ./client/app.js",
