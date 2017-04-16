@@ -8,7 +8,7 @@
    "start": "node server.js",
    "start-dev": "nodemon server.js",
     "build": "browserify -t hbsfy ./src/index.js -o ./client/app.js -dv",
-    "watch": "watchify -t hbsfy ./src/index.js -o ./client/app.js -dv"
+    "watch": "watchify -t hbsfy ./src/index.js -o ./client/app.js"
 
   },
   "repository": {
