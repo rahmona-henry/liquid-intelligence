@@ -1,6 +1,6 @@
-// var allBrews = require('../views/allBrews.hbs');
-var brewProfile = require('../views/brewProfile.hbs');
 var userHome = require('../views/userHome.hbs');
+var allBrews = require('../views/allBrews.hbs');
+var brewProfile = require('../views/brewProfile.hbs');
 var brewOptions = require('../views/brewOptions.hbs');
 var request = require('superagent');
 var handlebars = require('handlebars');
