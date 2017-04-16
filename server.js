@@ -8,7 +8,7 @@ var KnexSessionStore = require('connect-session-knex')(session)
 var store = new KnexSessionStore({knex: knex})
 
 app.use(express.static('client'))
-// app.set('views',path.join(__dirname,'views'))
+app.set('views',path.join(__dirname,'views'))
 
 
 app.use(bodyParser.urlencoded({extended:true}))
@@ -95,7 +95,7 @@ app.post('/signUp', function(req,res){
 app.post('/signIn', function(req,res){
   knex('users').where({email:req.body.email})
     .then(function(data){
-      
+
      if(req.body.email === ''){
        res.redirect('/')
      }
