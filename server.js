@@ -81,7 +81,7 @@ req.session.destroy()
  ////////// POST ROUTES //////////
 
 app.post('/signUp', function(req,res){
-   var hash = bcrypt.hashSync(req.body.password, 10)
+   var hash = bcrypt.hashSync(req.body.hashed_password, 10)
     knex('users').insert({email:req.body.email, hashed_password:hash})
        .then(function(data){
          console.log('req.body.hashed_password', req.body.hashed_password)
@@ -103,7 +103,7 @@ app.post('/signIn', function(req,res){
      }
 
      else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
-             req.session.emailId = data[0].email
+      req.session.emailId = data[0].email
        res.redirect('userHome')
      }
      else {
