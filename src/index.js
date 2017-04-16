@@ -1,10 +1,14 @@
+var request = require('superagent');
+var handlebars = require('handlebars');
+var $ = require('jquery')
+
 var userHome = require('../views/userHome.hbs');
 var allBrews = require('../views/allBrews.hbs');
 var brewProfile = require('../views/brewProfile.hbs');
 var brewOptions = require('../views/brewOptions.hbs');
-var request = require('superagent');
-var handlebars = require('handlebars');
-var $ = require('jquery')
+
+
+
 
 $(document).ready(function(){
   $('#showBtn').click(function(){
