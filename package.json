@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/rahmona-henry/liquid-intelligence#readme",
   "dependencies": {
-
+    "bcrypt": "^1.0.2",
     "bcrypt-node": "^0.1.0",
     "body-parser": "^1.15.2",
     "browserify": "^13.1.0",
