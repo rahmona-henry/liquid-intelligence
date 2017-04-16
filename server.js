@@ -15,8 +15,7 @@ app.set('views',path.join(__dirname,'views'))
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine','hbs')
 app.set('port', (process.env.PORT || 3000));
-app.use(require('express-session')
-({
+app.use(require('session'({
   secret: 'liquid network',
   saveUninitialized: true,
   resave: true,
