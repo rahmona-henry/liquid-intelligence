@@ -103,7 +103,7 @@ app.post('/signIn', function(req,res){
      }
 
      else if (bcrypt.compareSync(req.body.hashed_password, data[0].hashed_password)){
-      req.session.emailId = data[0].email
+       req.session.emailId = data[0].email
        res.redirect('userHome')
      }
      else {
